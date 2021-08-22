@@ -20,3 +20,23 @@ if (productImg && prodImages) {
         });
     });
 }
+
+// account page
+const loginSpan = document.querySelectorAll('.account-page .form-container span')[0],
+    registerSpan = document.querySelectorAll('.account-page .form-container span')[1],
+    loginForm = document.querySelector('#login-form'),
+    registerForm = document.querySelector('#register-form'),
+    indicator = document.querySelector('#indicator');
+
+if (loginSpan && loginForm && registerSpan && registerForm && indicator) {
+    loginSpan.onclick = () => {
+        registerForm.style.transform = 'translateX(300px)';
+        loginForm.style.transform = 'translateX(300px)';
+        indicator.style.transform = 'translateX(0px)';
+    }
+    registerSpan.onclick = () => {
+        registerForm.style.transform = 'translateX(0px)';
+        loginForm.style.transform = 'translateX(0px)';
+        indicator.style.transform = 'translateX(100px)';
+    }
+}
