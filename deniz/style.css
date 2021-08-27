@@ -1,0 +1,199 @@
+:root{
+    --mobile-containers-width:80%;
+}
+*{
+    margin:0;
+    padding:0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+    background: #000;
+}
+.wrapper{
+    display:grid;
+    grid-template-areas:
+    'header'
+    'main'
+    'footer';
+}
+header{
+    grid-area: header;
+    width:100%;
+}
+main{
+    grid-area: main;
+    width: var(--mobile-containers-width);
+    margin:0 auto;
+}
+footer{
+    grid-area: footer;
+}
+
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: var(--mobile-containers-width);
+    margin:0 auto;
+}
+nav ul {
+    display:none;
+}
+#humb-icon{
+    display:block;
+    margin:26px 0 0 0;
+    width:35px;
+}
+.humb-icon__line{
+    display:block;
+    width:100%;
+    height:5px;
+    margin-bottom:4px;
+    background:#bcbcbc;
+}
+
+.logo{
+    display:block;
+    margin:42px auto 0;
+}
+.logo img {
+    width:100%;
+    object-fit: fill;
+}
+
+.selection {
+    align-items: center;
+    display:flex;
+    justify-content: flex-start;
+    margin:30px auto 0;
+}
+.selection span{
+    color:#fff;
+    text-transform: uppercase;
+    font-size:30px;
+    line-height: 36px;
+    font-family:'Montserrot', sans-serif;
+    padding-bottom:6px;
+    border-bottom:5px solid rgba(0,0,0,1);
+}
+.selection span:last-child{
+    margin-left:40px;
+}
+.selection span.active{
+    border-bottom:5px solid rgba(187,18,146,1);
+}
+form{
+    margin:20px auto 0;
+}
+input {
+    display: block;
+    border: none;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 14px;
+    font-family: 'Montserrot', sans-serif;
+    padding: 15px 16px;
+    width: 90%;
+    margin-bottom: 10px;
+}
+input:focus {
+    outline: none;
+}
+.btn{
+    background: linear-gradient(90deg, #ff0094 0%, #2d0097 100%);
+    border-radius:10px;
+    border:none;
+    color:#fff;
+    display:block;
+    font-family:'Montserrot', sans-serif;
+    font-size: 15px;
+    line-height: 18px;
+    margin-top:40px;
+    padding:14px 15px;
+    text-transform: uppercase;
+    width: 100%;
+}
+form a {
+    display:block;
+    font-family:'Montserrot', sans-serif;
+    font-size:10px;
+    line-height: 12px;
+    margin-top:10px;
+    text-align:center;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 489px) {
+    form input {
+        width:92%;
+    }
+}
+@media only screen and (min-width: 576px) {
+    nav {
+        width:88%;
+    }
+    #humb-icon{
+        width:62px;
+    }
+    .humb-icon__line{
+        height:9px;
+        margin-bottom:7px;
+    }
+    form input {
+    width:94%;
+    }
+}
+@media only screen and (min-width: 768px) {
+    nav {
+        width:88%;
+    }
+    .selection span {
+    font-size: 45px;
+    line-height: 54px;
+    }
+    form input {
+        font-size: 20px;
+        line-height: 24px;
+        width:95%;
+    }
+    .btn{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    form a {
+        font-size: 15px;
+        line-height: 18px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    form input {
+        width:96%;
+    }
+}
+@media only screen and (min-width: 1140px) {
+    #humb-icon{
+        display:none;
+    }
+    nav ul {
+        align-items: center;
+        display:flex;
+        justify-content: space-around;
+        margin-top:40px;
+    }
+    nav ul li {
+        margin-right:20px;
+    }
+    nav ul li a{
+        color:rgba(182,182,182,1);
+        font-family:'Montserrot', sans-serif;
+        font-size:25px;
+        line-height: 30px;
+        text-decoration: none;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+        color: rgba(187,18,146,1);
+    }
+}
